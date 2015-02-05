@@ -1,0 +1,13 @@
+{
+  "name": "PDP-PIP",
+  "description": "PDP and PIP",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mongodb": "*",
+    "frisby" : "*",
+    "request": "*",
+    "body-parser":"*"
+  }
+}

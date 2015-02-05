@@ -1,0 +1,21 @@
+Tested with Node.js version:
+   - v0.10.26
+
+Download dependencies:
+   - "npm install"
+
+Install jasmine-node (only required to run the tests)
+   - "npm install -g jasmine-node"
+
+
+To start the PDP:
+   "node PDP-Server.js"
+
+
+To run the tests:
+	- Start PDP "node server.js"
+	- Run tests "jasmine-node test/"
+
+
+
+
