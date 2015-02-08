@@ -201,38 +201,14 @@ exports.getPolicy = function(req, res) {
 		return;
 		}
 
-	// Get Meta-data (including the policy) for the caller and the callee
-	
-	// Get user ID from IDM
-	var user_id = "";
-	var request = require("request");
-	request({
-		url: "http://localhost:8080/idm/user/info/",
-		headers: {"Authorization" : 'Bearer ' + caller, 'Content-Type' : 'application/json'},
-		method: 'GET'
-	}, function (error, response, body) {
-		if (response != undefined){
-			console.log('Status: ' + response.statusCode);
-			user_id = JSON.parse(body).id;
-			console.log("The user id is: " + user_id);
-		} else {
-			console.log("Could not connect to IDM");
-		}
-	});
-
-	// Get Owner
-	var owner = getEntityOwner(callee, caller);
-
-	// Evaluate policies
-	evalResult = pdp.evaluatePolicy(user_id, owner);
 
 	// Store policy
-	if (evalResult == true) {
+	//if (evalResult == true) {
 		getPolicyMongo(callee, db_collection, res);
-	}else {
-		res.status(500);
-		res.json({error:'Failer during the policy evaluation'});
-	}
+	//}else {
+	//	res.status(500);
+	//	res.json({error:'Failer during the policy evaluation'});
+	//}
 };
 
 

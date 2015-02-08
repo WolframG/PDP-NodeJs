@@ -8,9 +8,9 @@
 # Short-Description: Start daemon at boot time
 # Description: Enable service provided by daemon.
 ### END INIT INFO
-dir="/vagrant/PIP"
+dir="~vagrant/PDP-NodeJs"
 user="vagrant"
-cmd="node /vagrant/PIP/PIP_Server3.js"
+cmd="node ~vagrant/PDP-NodeJs/PDP_Server.js"
 name=`basename $0`
 pid_file="/var/run/$name.pid"
 stdout_log="/var/log/$name.log"
