@@ -95,8 +95,8 @@ exports.updatePolicy = function(req, res) {
 	
 	// Store policy
 	if (evalResult == true) {
-		var request-Ser = require("request");
-		request-Ser({
+		var request_Ser = require("request");
+		request_Ser({
 		  url: servioticy_url + callee,
 		  body: securityMetaData,
 		  headers: {"Content-Type": "application/json", "Authorization": caller},

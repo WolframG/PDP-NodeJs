@@ -8,6 +8,7 @@
     "mongodb": "*",
     "frisby" : "*",
     "request": "*",
+    "async" : "*",
     "body-parser":"*"
   }
 }
